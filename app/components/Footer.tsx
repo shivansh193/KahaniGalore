@@ -67,7 +67,7 @@ const contactInfo: ContactItem[] = [
   },
   {
     icon: <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>,
-    lines: ['hello@celestafiesta.com'],
+    lines: ['hello@kahanigalore.com'],
     iconBgColor: 'bg-[#f05656]',
   },
   {
@@ -89,10 +89,10 @@ const Footer: FC = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
               <div className="w-16 h-16 bg-[#74dff6] rounded-full flex items-center justify-center border-4 border-white mr-4">
-                <span className="text-white font-bold text-2xl">CF</span>
+                <span className="text-white font-bold text-2xl">KG</span>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white font-bebas tracking-wider">CELESTA FIESTA</h3>
+                <h3 className="text-2xl font-bold text-white font-bebas tracking-wider">KAHANI GALORE</h3>
                 <p className="text-[#74dff6] text-sm font-twinkle">Where Magic Meets Creativity</p>
               </div>
             </div>
@@ -156,7 +156,7 @@ const Footer: FC = () => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm font-twinkle">
-              © {currentYear} Celesta Fiesta. All rights reserved.
+              © {currentYear} Kahani Galore. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy-policy" className="text-gray-400 hover:text-[#74dff6] text-sm transition-colors duration-300 font-twinkle">Privacy Policy</Link>

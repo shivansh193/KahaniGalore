@@ -1,48 +1,44 @@
-// components/HeroSection.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
 import type { FC } from 'react';
+import Image from 'next/image';
 
-// Define an interface for the shape of each slide object
 interface Slide {
   title: string;
   subtitle: string;
   description: string;
-  bgColor: string; // e.g., "from-[#8b6baf] to-[#74dff6]"
+  image: string;
 }
 
 const HeroSection: FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Apply the Slide interface to our array for type safety
   const slides: Slide[] = [
     {
-      title: 'Welcome to Celesta Fiesta',
+      title: 'Welcome to Kahani Galore',
       subtitle: 'Where Magic Meets Creativity',
       description: 'Creating unforgettable experiences for children through art, play, and imagination',
-      bgColor: 'from-[#8b6baf] to-[#74dff6]',
+      image: '/images/hero1.jpg',
     },
     {
       title: 'DIY Activities & More',
       subtitle: "Unleash Your Child's Creativity",
       description: 'Over 50 exciting DIY activities designed to inspire and educate',
-      bgColor: 'from-[#75c044] to-[#fff572]',
+      image: '/images/hero2.jpg',
     },
     {
       title: 'Professional Kids Salon',
       subtitle: 'Pampering for Little Ones',
       description: 'The only professional kids salon in Gurgaon with SLS and paraben-free products',
-      bgColor: 'from-[#f05656] to-[#8b6baf]',
+      image: '/images/hero3.jpg',
     },
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      // TypeScript knows 'prev' is a number and 'slides.length' is a number
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [slides.length]);
 
@@ -51,11 +47,19 @@ const HeroSection: FC = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 bg-gradient-to-br ${slide.bgColor} transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+          <Image
+            src={slide.image}
+            alt={`Slide ${index + 1}`}
+            fill
+            className="object-cover"
+            priority={index === 0}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
           <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-4">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up font-bebas tracking-wider">
@@ -93,11 +97,6 @@ const HeroSection: FC = () => {
           />
         ))}
       </div>
-
-      {/* Floating elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-[#fff572] opacity-20 animate-bounce animation-delay-1000"></div>
-      <div className="absolute top-40 right-20 w-16 h-16 rounded-full bg-[#75c044] opacity-30 animate-bounce animation-delay-2000"></div>
-      <div className="absolute bottom-40 left-20 w-12 h-12 rounded-full bg-[#f05656] opacity-25 animate-bounce animation-delay-3000"></div>
     </div>
   );
 };
