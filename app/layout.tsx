@@ -1,35 +1,6 @@
-import localFont from 'next/font/local';
 import "./globals.css"
 
 
-
-const twinkleSunday = localFont({
-  src: '../public/fonts/TwinkleSunday.otf',
-  variable: '--font-twinkle',
-  display: 'swap',
-});
-
-const bebasNeue = localFont({
-  src: [
-    {
-      path: '../public/fonts/BEBASNOTE-BOLD.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/BEBASNOTE-LIGHT.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/BEBASNOTES.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-bebas',
-  display: 'swap',
-});
 
 export const metadata = {
   title: 'KAHANI GALORE',
@@ -42,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${twinkleSunday.variable} ${bebasNeue.variable}`}>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
