@@ -307,7 +307,7 @@ export default function WhoWeArePage() {
               Our Passionate Team
             </h2>
             <p className="text-responsive text-gray-700 leading-relaxed">
-              We're a diverse group of creative professionals, educators, and child care experts who share one mission: 
+              We&apos;re a diverse group of creative professionals, educators, and child care experts who share one mission: 
               creating joyful, safe, and unforgettable experiences for children and families. Each team member brings 
               unique skills, boundless energy, and genuine love for what we do! 
             </p>
