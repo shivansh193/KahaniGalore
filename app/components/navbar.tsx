@@ -15,8 +15,8 @@ const Navbar: FC = () => {
 
   const navItems: NavItem[] = [
     { name: 'Home', href: '/' },
-    { name: 'What we do', href: '/what-we-do' },
-    { name: 'Who we are', href: '/who-we-are' },
+    { name: 'What we do', href: '/whatwedo' },
+    { name: 'Who we are', href: '/whoweare' },
     { name: 'Contact', href: '/contact' },
   ];
 
