@@ -29,7 +29,7 @@ const HeroSection: FC = () => {
             Creating unforgettable experiences for children through art, play, and imagination
           </p>
           <div className="space-x-4 animate-fade-in-up animation-delay-600">
-            <button className="bg-white text-[#8b6baf] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#fff572] hover:text-[#231f20] transition-all duration-300 transform hover:scale-105 shadow-lg font-twinkle" onClick={router.push('/services')}>
+            <button className="bg-white text-[#8b6baf] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#fff572] hover:text-[#231f20] transition-all duration-300 transform hover:scale-105 shadow-lg font-twinkle" onClick={()=>router.push('/services')}>
               Explore Services
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-[#8b6baf] transition-all duration-300 transform hover:scale-105 font-twinkle">
