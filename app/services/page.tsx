@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Star, Heart, Sparkles } from 'lucide-react';
 
 interface ServiceData {
@@ -161,9 +162,11 @@ const PolaroidCarousel: React.FC<PolaroidCarouselProps> = ({ images, title, colo
               className="w-full flex-shrink-0 px-2"
             >
               <div className="bg-white p-4 shadow-xl transform rotate-2 hover:rotate-0 transition-all duration-300 hover:scale-105 rounded-lg border-4 border-white">
-                <img
+                <Image
                   src={image}
                   alt={`${title} - Image ${index + 1}`}
+                  width={400}
+                  height={300}
                   className="w-full h-64 object-cover rounded"
                 />
                 <div className="mt-3 text-center">

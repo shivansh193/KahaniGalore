@@ -165,7 +165,7 @@ Sent from Kahanigalore Contact Form 🎨
             Contact Us
           </h1>
           <p className="text-responsive text-white/95 mb-8 animate-fade-in-up animation-delay-200 font-semibold">
-            🌈 We'd love to hear from you! Get in touch and let's create something magical together! 🌈
+            🌈 We&apos;d love to hear from you! Get in touch and let&apos;s create something magical together! 🌈
           </p>
         </div>
       </section>
@@ -183,7 +183,7 @@ Sent from Kahanigalore Contact Form 🎨
                   Send Us a Message
                 </h2>
                 <p className="text-gray-600">
-                  Fill out the form below and we'll get back to you super fast! ⚡
+                  Fill out the form below and we&apos;ll get back to you super fast! ⚡
                 </p>
               </div>
 
@@ -269,7 +269,7 @@ Sent from Kahanigalore Contact Form 🎨
                     className={`w-full px-4 py-3 rounded-xl border-2 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-celesta-blue/30 resize-none ${
                       errors.query ? 'border-red-400 bg-red-50' : 'border-gray-200 focus:border-celesta-blue'
                     }`}
-                    placeholder="Tell us about your magical ideas, questions, or how we can help make your child's day special! 🌟"
+                    placeholder="Tell us about your magical ideas, questions, or how we can help make your child&apos;s day special! 🌟"
                   />
                   {errors.query && (
                     <p className="text-red-500 text-sm mt-1 font-semibold">{errors.query}</p>
@@ -378,7 +378,7 @@ Sent from Kahanigalore Contact Form 🎨
                     <div>
                       <h4 className="font-bold text-gray-800 mb-1">Business Hours! 🕐</h4>
                       <p className="text-gray-700 font-semibold">{contactInfo.hours}</p>
-                      <p className="text-sm text-gray-600 mt-1">We're here when you need us! 🌟</p>
+                      <p className="text-sm text-gray-600 mt-1">We&apos;re here when you need us! 🌟</p>
                     </div>
                   </div>
                 </div>
@@ -432,10 +432,10 @@ Sent from Kahanigalore Contact Form 🎨
           </div>
           
           <h2 className="text-responsive-lg font-bold text-white mb-6 text-shadow">
-            Can't Wait to Hear From You! 🌟
+            Can&apos;t Wait to Hear From You! 🌟
           </h2>
           <p className="text-responsive text-white/95 mb-8 font-semibold">
-            Whether you have questions, want to book a service, or just want to say hello - we're here for you! ✨
+            Whether you have questions, want to book a service, or just want to say hello - we&apos;re here for you! ✨
           </p>
           <div className="flex justify-center">
             <button 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Star, Heart, Sparkles, Award, Users, Smile } from 'lucide-react';
 
 interface TeamMember {
@@ -222,9 +223,11 @@ const TeamCard: React.FC<TeamCardProps> = ({ member, index }) => {
         ) : (
           // FRONT CONTENT: Displayed when isFlipped is false
           <div className="w-full h-full bg-white rounded-2xl overflow-hidden shadow-lg">
-            <img
+            <Image
               src={member.image}
               alt={member.name}
+              width={300}
+              height={225}
               className="w-full h-3/4 object-cover"
             />
             <div className="absolute top-4 right-4">
