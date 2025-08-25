@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 const HeroSection: FC = () => {
-  const router=useRouter();
+  const router = useRouter();
   return (
     <div className="relative h-screen overflow-hidden">
       <Image
@@ -15,12 +15,14 @@ const HeroSection: FC = () => {
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      {/* Change 1: Use your brand's Off-Black for the overlay */}
+      <div className="absolute inset-0 bg-text-charcoal bg-opacity-60"></div>
 
       <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up font-bebas tracking-wider">
-            Welcome to Kahani Galore
+            {/* Change 2: Add a splash of color to the heading */}
+            Welcome to <span className="text-highlight-yellow">Kahani Galore</span>
           </h1>
           <p className="text-2xl md:text-3xl mb-8 font-medium animate-fade-in-up animation-delay-200 font-twinkle">
             Where Magic Meets Creativity
@@ -29,10 +31,15 @@ const HeroSection: FC = () => {
             Creating unforgettable experiences for children through art, play, and imagination
           </p>
           <div className="space-x-4 animate-fade-in-up animation-delay-600">
-            <button className="bg-white text-[#8b6baf] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#fff572] hover:text-[#231f20] transition-all duration-300 transform hover:scale-105 shadow-lg font-twinkle" onClick={()=>router.push('/services')}>
+            {/* Change 3: Make the primary button use your main accent color */}
+            <button
+              className="bg-accent-red text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-secondary-lavender transition-all duration-300 transform hover:scale-105 shadow-lg font-twinkle"
+              onClick={() => router.push('/services')}
+            >
               Explore Services
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-[#8b6baf] transition-all duration-300 transform hover:scale-105 font-twinkle">
+            {/* Change 4: Refine the secondary button's hover state */}
+            <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary-blue transition-all duration-300 transform hover:scale-105 font-twinkle">
               Book Now
             </button>
           </div>
